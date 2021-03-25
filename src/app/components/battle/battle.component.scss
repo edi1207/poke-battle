@@ -1,0 +1,16 @@
+@import '../../scss/varibles';
+
+.container {
+    height: calc(100% - 57px);
+    .title {
+        width: 169px;
+    }
+    .btn {
+        width: 201px;
+        height: 47px;
+        &.btn-text {
+            margin-top: 36px;
+            margin-bottom: 13px;
+        }
+    }
+}

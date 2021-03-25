@@ -1,0 +1,20 @@
+@import '../../scss/varibles';
+
+.main {
+    background: $white;
+    box-shadow: inset -1px -1px 0px 1px $shadow-color;
+    border-radius: 16px;
+    height: 360px;
+    width: 305px;
+    .frame {
+        border: 2px solid $primary-blue;
+        border-radius: 16px;
+    }
+}
+
+.under-shadow {
+    background: radial-gradient(50% 50% at 50% 50%, rgba(122, 142, 174, 0.24) 0%, rgba(255, 255, 255, 0) 100%);
+    width: 290px;
+    height: 24px;
+}
+

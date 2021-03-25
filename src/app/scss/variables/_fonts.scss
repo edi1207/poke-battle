@@ -1,0 +1,39 @@
+@import './colors';
+
+.title {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    color: $primary-blue;
+    text-align: center;
+}
+
+.card-poke-name {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    color: $primary-blue;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.btn-text {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    text-align: center;
+    &-secondary {
+        color: $primary-blue;
+        font-weight: 600;
+    }
+}
+
+.stats {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    color: $primary-blue;
+    &-title {
+        font-weight: 700;
+    }
+}
