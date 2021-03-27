@@ -1,0 +1,84 @@
+@import '../../scss/varibles';
+
+.row {
+    padding: 32px 56px;
+    height: calc(100% - 57px);
+    max-width: 1024px;
+    a {
+        cursor: pointer;
+        color: $primary-blue;
+        &:hover {
+            text-decoration: none;
+        }
+        &::after {
+            content: '';
+            position: relative;
+            right: 70px;
+            position: relative;
+            border: 2px solid #2F6DB5;
+            transform: rotate(90deg);
+            border-style: solid;
+            border-width: 1px 1px 0 0;
+            display: inline-block;
+            height: 10px;
+            top: 13px;
+            transform: rotate(-135deg);
+            vertical-align: top;
+            width: 10px;
+        }
+    }
+    .stats.ability {
+        font-weight: 600;
+        color: $shadow-color;
+    }
+    .abilities {
+        background: $white;
+        border-radius: 16px;
+        padding: 16px 28px 16px 24px;
+        max-width: 551px;
+    }
+    .stats-container {
+        max-width: 561px;
+        margin: auto 0;
+        justify-content: space-between;
+        padding-right: 10px;
+        .stats-info {
+            background: $white;
+            border-radius: 16px;
+            width: 263px;
+            height: 148px;
+            padding: 24px;
+            padding-bottom: 16px;
+            margin-bottom: 24px;
+            .stats-title {
+                margin-bottom: 12px;
+                line-height: 16px;
+            }
+            .stats {
+                margin: 12px 0;
+                line-height: 16px;
+            }
+        }
+    }
+}
+
+@media (max-width: 690px) {
+    .row {
+        .stats-container {
+            padding-right: 0;
+            .abilities {
+                min-width: 305px;
+            }
+            .stats-info {
+                width: 100%;
+                min-width: 305px;
+            }
+        }
+    }
+}
+
+@media (max-width: 399px) {
+    .row {
+        padding: 32px 44px;
+    }
+}

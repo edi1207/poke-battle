@@ -1,0 +1,70 @@
+@import "../../scss/varibles";
+
+.row {
+    padding-left: 30px;
+    padding-right: 30px;
+    height: calc(100% - 57px);
+    justify-content: space-between;
+    align-content: flex-start;
+    max-width: 1024px;
+    .poke-card {
+        // width: 30%;
+        margin-top: 26px;
+        cursor: pointer;
+    }
+    .pagination {
+        padding-top: 52px;
+        padding-bottom: 39px;
+        .title {
+            margin: 0 65px;
+            margin-top: -4px;
+        }
+        .prev,
+        .next {
+            width: 40px;
+            height: 40px;
+            border: 2px solid $primary-blue;
+            border-radius: 8px;
+            padding: 0 11px;
+            cursor: pointer;
+        }
+        .prev::after {
+            content: '';
+            position: relative;
+            left: 5px;
+            position: relative;
+            border: 2px solid #2F6DB5;
+            border-style: solid;
+            border-width: 2px 2px 0 0;
+            display: inline-block;
+            height: 10px;
+            top: 14px;
+            transform: rotate(-135deg);
+            vertical-align: top;
+            width: 10px;
+        }
+        .next::after {
+            content: '';
+            position: relative;
+            left: 0;
+            position: relative;
+            border: 2px solid #2F6DB5;
+            border-style: solid;
+            border-width: 2px 2px 0 0;
+            display: inline-block;
+            height: 10px;
+            top: 14px;
+            transform: rotate(45deg);
+            vertical-align: top;
+            width: 10px;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .row {
+        // padding-left: 15px;
+        // padding-right: 15px;
+        justify-content: space-around;
+    }
+}

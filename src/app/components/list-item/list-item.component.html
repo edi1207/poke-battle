@@ -1,0 +1,32 @@
+<div class="row mx-lg-auto">
+    <div class="col col-lg-8 d-flex flex-column lx-0">
+        <a class="stats-back mb-5" (click)="back()">Back</a>
+        <div class="title text-left text-capitalize mt-5">{{ pokeName }}</div>
+        <div class="stats mt-2 mb-4">Species</div>
+        <div class="mx-auto px-0 d-block d-lg-none">
+            <app-poke-card [pokeName]="pokeName"></app-poke-card>
+        </div>
+        <div class="mx-auto">
+
+            <div class="stats ability mt-3">Abilities</div>
+            <div class="abilities mb-4">
+                <span 
+                class="text-capitalize" 
+                *ngFor="let abilityName of pokeInfos.abilityNames; let i=index">
+                    {{ abilityName }} <span *ngIf="i < (pokeInfos.abilityNames.length - 1)">,</span> 
+                </span>
+            </div>
+            <div class="stats ability mt-3">Stats</div>
+            <div class="stats-container d-flex flex-wrap">
+                <div class="stats-info d-flex flex-column" *ngFor="let s of pokeInfos.stats">
+                    <div class="stats-title text-capitalize">{{ s.stat.name }}</div>
+                    <div class="stats text-capitalize">{{ s.base_stat }}</div>
+                    <div class="stats text-capitalize">{{ s.effort }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-4 my-auto px-0 d-none d-lg-block">
+        <app-poke-card [pokeName]="pokeName"></app-poke-card>
+    </div>
+</div>

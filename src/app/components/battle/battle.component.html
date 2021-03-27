@@ -1,15 +1,24 @@
 <div class="container d-flex">
     <div class="col m-auto">
-        <div class="d-flex justify-content-center">
-            <app-poke-card [id]="1"></app-poke-card>
+        <div *ngIf="winnerName === ''" class="d-flex justify-content-center">
+            <app-poke-card [pokeName]="pokemon1?.name"></app-poke-card>
             <div class="title my-auto">VS</div>
-            <app-poke-card [id]="4"></app-poke-card>
+            <app-poke-card [pokeName]="pokemon2?.name"></app-poke-card>
         </div>
-        <div class="d-flex flex-column justify-content-center">
+        <div *ngIf="winnerName != ''" class="d-flex flex-column justify-content-center">
             <div class="title mx-auto">Winner!</div>
-            <app-poke-card class="mx-auto" [id]="4"></app-poke-card>
-            <button class="btn btn-primary btn-text mx-auto">Start New battle</button>
-            <button class="btn btn-outline-primary btn-text-secondary mx-auto">Start New battle</button>
+            <app-poke-card class="mx-auto" [pokeName]="winnerName"></app-poke-card>
+            <button 
+             class="btn btn-primary btn-text mx-auto"
+             (click)="startBattle()">
+                Start New battle
+            </button>
+            <button 
+             class="btn btn-outline-primary btn-text-secondary mx-auto" 
+             (click)="removeWinner()"
+             [routerLink]="['/home']">
+                End game
+            </button>
         </div>
     </div>
 </div>

@@ -1,10 +1,9 @@
 <div class="main p-4">
     <div class="frame d-flex flex-column">
-        <img *ngIf="id === 1" src="assets/img/img_bulbasaur.png" alt="Bulbasaur">
-        <img *ngIf="id === 4" src="assets/img/img_charmander.png" alt="Charmander">
-        <div *ngIf="id === 1" class="card-poke-name">Bulbasaur</div>
-        <div *ngIf="id === 4" class="card-poke-name">Charmander</div>
+        <img [src]="pokeImgUrl" alt="{{ pokeName }}">
+    
+        <div class="card-poke-name text-capitalize">{{ pokeName }}</div>
     </div>
 </div>
 
-<div class="under-shadow mt-1"></div>
+<div *ngIf="showShadow" class="under-shadow mt-1"></div>
