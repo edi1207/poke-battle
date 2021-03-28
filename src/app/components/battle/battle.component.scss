@@ -1,15 +1,22 @@
 @import '../../scss/varibles';
 
 .container {
-    height: calc(100% - 57px);
-    // overflow-x: scroll;
-    // .col {
-        
-    // }
+    display: flex;
+    min-height: calc(100% - 57px);
+    overflow-y: hidden;
     .winner,
     .battle {
-        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: calc(100% - 57px);
         align-items: center;
+        overflow-y: scroll;
+    }
+    .battle {
+        .title {
+            margin: 4px auto;
+        }
     }
     .title {
         width: 169px;
@@ -17,9 +24,61 @@
     .btn {
         width: 201px;
         height: 47px;
+        border-radius: 8px;
         &.btn-text {
             margin-top: 36px;
             margin-bottom: 13px;
+        }
+        &.btn-primary,
+        &.btn-primary:hover {
+            background-color: $primary-blue;
+            border-color: $primary-blue;
+        }
+        &.btn-primary:focus {
+            box-shadow: none;
+        }
+        &.btn-outline-primary {
+            border-color: $primary-blue;
+            &:hover{
+                background: $primary-blue;
+                color: $white;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        .battle {
+            .title {
+                margin: auto 0;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        .battle {
+            flex-direction: row;
+            .title {
+                margin: auto 16px;
+            }
+        }
+        
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        height: calc(100vh - 57px);
+        .battle {
+            justify-content: start;
+            padding-top: 20px;
+            height: calc(100vh - 57px);
+        }
+        .winner {
+            height: calc(100vh - 57px);
         }
     }
 }

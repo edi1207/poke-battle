@@ -15,12 +15,17 @@
         }
     }
     .btn {
-        font-size: 16px;
-        font-family: 'Montserrat';
-        font-weight: 500;
         border: 1px solid #C4C4C4;
         border-radius: 8px;
         width: 152px;
         height: 38px;
+        font-size: 14px;
+        &.btn-outline-primary {
+            color: $primary-blue;
+            &:hover {
+                color: $white;
+                background-color: $primary-blue;
+            }
+        }
     }
 }

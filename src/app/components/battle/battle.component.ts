@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { FetchService } from './../../services/fetch.service';
 import { Component, OnDestroy, OnInit } from '@angular/core';
@@ -27,7 +28,9 @@ export class BattleComponent implements OnDestroy, OnInit {
   public position = 'up';
 
   private pokemonSubscription: Subscription;
-  constructor(private fetchService: FetchService) { }
+  constructor(
+              private fetchService: FetchService,
+              private router: Router) { }
 
   ngOnInit(): void {
     this.startBattle();
@@ -85,7 +88,11 @@ export class BattleComponent implements OnDestroy, OnInit {
   }
 
   removeWinner(): void {
+    this.position = 'up';
     localStorage.removeItem('winner');
+    setTimeout(() => {
+      this.router.navigateByUrl('/pokeHome');
+    }, 600);
   }
 
   ngOnDestroy(): void {

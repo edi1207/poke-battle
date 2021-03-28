@@ -1,0 +1,11 @@
+@import './colors';
+
+.btn {
+    border-radius: 8px;
+}
+
+.btn-primary,
+.btn-primary:hover {
+    background-color: $primary-blue;
+    border-color: $primary-blue;
+}

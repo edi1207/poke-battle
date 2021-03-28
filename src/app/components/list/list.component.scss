@@ -15,6 +15,9 @@
     .pagination {
         padding-top: 52px;
         padding-bottom: 39px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
         .title {
             margin: 0 65px;
             margin-top: -4px;

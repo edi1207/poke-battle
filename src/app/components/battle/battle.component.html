@@ -1,15 +1,15 @@
-<div class="container d-flex">
+<div class="container">
     <div class="col" [@state]="position" >
 
             <div 
-             class="battle d-flex flex-column flex-md-row justify-content-center mt-5">
+             class="battle">
                 <app-poke-card class="mx-auto mx-lg-0" [pokeName]="pokemon1?.name"></app-poke-card>
-                <div class="title my-auto mx-auto mx-md-3 mx-lg-0">VS</div>
+                <div class="title">VS</div>
                 <app-poke-card class="mx-auto mx-lg-0 mt-3 mt-md-0" [pokeName]="pokemon2?.name"></app-poke-card>
             </div>
 
             <div 
-             class="winner d-flex flex-column justify-content-center">
+             class="winner">
                 <div class="title mx-auto">Winner!</div>
                 <app-poke-card class="mx-auto" [pokeName]="winnerName"></app-poke-card>
                 <button 
@@ -20,7 +20,7 @@
                 <button 
                  class="btn btn-outline-primary btn-text-secondary mx-auto" 
                  (click)="removeWinner()"
-                 [routerLink]="['/home']">
+                 >
                     End game
                 </button>
             </div>

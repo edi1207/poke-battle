@@ -24,7 +24,7 @@ function slideTo(direction) {
         query(':enter, :leave', [
             style({
                 position: 'absolute',
-                top: `${28.5}px`,
+                top: 0,
                 [direction]: 0,
                 width: 100 + '%',
                 // height: 'calc(' + 100 + '% - ' + 57 + 'px)'

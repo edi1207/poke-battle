@@ -6,14 +6,10 @@
      [routerLink]="['/pokeList', name]">
         <app-poke-card [pokeName]="name" [showShadow]="false" ></app-poke-card>
     </a>
-    <div class="pagination d-flex justify-content-center w-100">
+    <div class="pagination">
         <a class="prev" (click)="getPokemons(-1)"></a>
         <div class="title">{{ page }}</div>
         <a class="next" (click)="getPokemons(1)"></a>
     </div>
 
-    <!-- <ngb-pagination 
-     [(page)]="page" 
-     [pageSize]="pageSize" 
-     [collectionSize]="1118"></ngb-pagination> -->
 </div>

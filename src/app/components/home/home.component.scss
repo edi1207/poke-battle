@@ -1,5 +1,7 @@
+@import '../../scss/varibles';
+
 .container {
-    height: calc(100% - 57px);
+    height: calc(100vh - 57px);
 
     img {
         max-width: 493px;
@@ -11,6 +13,12 @@
         height: 47px;
         margin: auto;
         margin-top: 45px;
+        border-radius: 8px;
+        &.btn-primary,
+        &.btn-primary:hover {
+            background-color: $primary-blue;
+            border-color: $primary-blue;
+        }
     }
 }
 
@@ -18,9 +26,6 @@
     .container {
         img {
             max-width: 250px;
-        }
-        .btn {
-            width: 180px;
         }
     }
 }
