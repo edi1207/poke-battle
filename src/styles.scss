@@ -2,6 +2,7 @@
 
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700");
 
 body {
     background: #FAFAFA;
@@ -12,4 +13,12 @@ body {
     top: 0;
     left: 0;
     right: 0;
+}
+
+
+::-webkit-scrollbar,
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-thumb:hover {
+    display: none;
 }

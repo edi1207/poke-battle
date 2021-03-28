@@ -1,24 +1,28 @@
 <div class="container d-flex">
-    <div class="col m-auto">
-        <div *ngIf="winnerName === ''" class="d-flex justify-content-center">
-            <app-poke-card [pokeName]="pokemon1?.name"></app-poke-card>
-            <div class="title my-auto">VS</div>
-            <app-poke-card [pokeName]="pokemon2?.name"></app-poke-card>
-        </div>
-        <div *ngIf="winnerName != ''" class="d-flex flex-column justify-content-center">
-            <div class="title mx-auto">Winner!</div>
-            <app-poke-card class="mx-auto" [pokeName]="winnerName"></app-poke-card>
-            <button 
-             class="btn btn-primary btn-text mx-auto"
-             (click)="startBattle()">
-                Start New battle
-            </button>
-            <button 
-             class="btn btn-outline-primary btn-text-secondary mx-auto" 
-             (click)="removeWinner()"
-             [routerLink]="['/home']">
-                End game
-            </button>
-        </div>
+    <div class="col" [@state]="position" >
+
+            <div 
+             class="battle d-flex flex-column flex-md-row justify-content-center mt-5">
+                <app-poke-card class="mx-auto mx-lg-0" [pokeName]="pokemon1?.name"></app-poke-card>
+                <div class="title my-auto mx-auto mx-md-3 mx-lg-0">VS</div>
+                <app-poke-card class="mx-auto mx-lg-0 mt-3 mt-md-0" [pokeName]="pokemon2?.name"></app-poke-card>
+            </div>
+
+            <div 
+             class="winner d-flex flex-column justify-content-center">
+                <div class="title mx-auto">Winner!</div>
+                <app-poke-card class="mx-auto" [pokeName]="winnerName"></app-poke-card>
+                <button 
+                 class="btn btn-primary btn-text mx-auto"
+                 (click)="startBattle()">
+                    Start New battle
+                </button>
+                <button 
+                 class="btn btn-outline-primary btn-text-secondary mx-auto" 
+                 (click)="removeWinner()"
+                 [routerLink]="['/home']">
+                    End game
+                </button>
+            </div>
     </div>
 </div>

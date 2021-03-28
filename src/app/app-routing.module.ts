@@ -10,15 +10,17 @@ const routes: Routes = [
   {
     path: '',
     redirectTo: 'pokeHome',
-    pathMatch: 'full' 
+    pathMatch: 'full'
   },
   {
     component: HomeComponent,
     path: 'pokeHome',
+    data: { animation: 'isLeft' }
   },
   {
     component: BattleComponent,
     path: 'pokeBattle',
+    data: { animation: 'isRight' }
   },
   {
     component: ListComponent,
